@@ -38,11 +38,17 @@ git diff README.md
 # ２行目：空行
 # ３行目：詳細
 git commit
-# @option -m １行のコミットメッセージと共に記録
+# @option -m  １行のコミットメッセージと共に記録
 # git commit -m "コミットメッセージ"
-# @option -a -allの略。差分のあるステージングエリアのファイルをまとめてaddして、かつcommitを実行する
+# @option -a  -allの略。差分のあるステージングエリアのファイルをまとめてaddして、かつcommitを実行する
 # git commit -a -m "コミットメッセージ"
 
+# コミット履歴の閲覧
+git log
+# @option --since --until  表示するログを特定の範囲に絞る。〜から〜まで
+# git log --since=yyyy-MM-dd --until=yyy-MM-dd
+# ログを辿るブランチを指定する
+# git log <branch>
 
 # その他
 
