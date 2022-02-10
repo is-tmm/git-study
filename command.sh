@@ -39,7 +39,9 @@ git diff README.md
 # ３行目：詳細
 git commit
 # @option -m １行のコミットメッセージと共に記録
-git commit -m "[add] READEMEファイルを新規作成"
+# git commit -m "コミットメッセージ"
+# @option -a -allの略。差分のあるステージングエリアのファイルをまとめてaddして、かつcommitを実行する
+# git commit -a -m "コミットメッセージ"
 
 
 # その他
