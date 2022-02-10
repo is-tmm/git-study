@@ -34,9 +34,8 @@ git diff README.md
 # git diff --word-diff README.md
 
 # リポジトリに変更を記録
-# １行目：要約
-# ２行目：空行
-# ３行目：詳細
+# １行目：要約, ２行目：空行, ３行目：詳細
+# 基本的にメッセージは、「現在形」「何故」「どのように」
 git commit
 # @option -m  １行のコミットメッセージと共に記録
 # git commit -m "コミットメッセージ"
