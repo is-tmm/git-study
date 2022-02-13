@@ -59,9 +59,20 @@ git reset <commit id>
 # 指定したコミット時点まで戻し、変更内容も破棄する
 git reset --hard <commit id>
 
-
+# 未追跡ファイルの一括削除
+# @option -n||--dry-run  削除対象になるファイルの確認
+git clean -n
+git clean --dry-run
+# @option -f  ファイルの強制削除の実行
+git clean -f
+# @option -d  ディレクトリを対象に行う
+git clean -nd
+git clean -fd
 
 # その他
 
+# 指定したファイルのワーキングディレクトリの状態を、ステージング済みの内容に上書きする
+git checkout <file>
+q
 # .gitを削除してGitの管理下からプロジェクトを外す
 # rm -rf .git
