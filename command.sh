@@ -24,14 +24,14 @@ git status
 # README.mdファイルをGitの管理対象に加える（ステージング）
 git add README.md
 # 複数ファイルを指定してステージング
-# git add <file> <file> <file>
+git add <file> <file> <file>
 # 一切合切ステージング
-# git add .
+git add .
 
 # 作業中ファイル（ワーキングエリア）とステージングエリアとの差分の確認
 git diff README.md
 # @option --word-diff  文字単位で差分比較
-# git diff --word-diff README.md
+git diff --word-diff README.md
 
 # リポジトリに変更を記録
 # １行目：要約, ２行目：空行, ３行目：詳細
@@ -107,6 +107,10 @@ git checkout <branch_name>
 git checkout <commit id>
 # ファイル指定のチェックアウトのみ、指定した状態まで全てを打ち消して戻す
 git checkout <commit id> <file_name>
+
+# コミットを打ち消す
+# 指定したコミットの変更内容に対して、変更内容を打ち消すコミットを新たに行う
+git revert <commit id>
 
 # その他
 
