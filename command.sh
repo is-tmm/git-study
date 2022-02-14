@@ -45,9 +45,37 @@ git commit
 # コミット履歴の閲覧
 git log
 # @option --since --until  表示するログを特定の範囲に絞る。〜から〜まで
-# git log --since=yyyy-MM-dd --until=yyy-MM-dd
+git log --since=yyyy-MM-dd --until=yyy-MM-dd
 # ログを辿るブランチを指定する
-# git log <branch>
+git log <branch>
+# @option -n  表示する履歴を制限する。3件表示する例：-n 3 
+git log -n <limit>
+# @option --oneline  各コミットを１行にして表示
+git log --oneline
+# @option --stat  追加行数と削除行数も表示
+git log --stat
+# @option -p  完全な差分を表示。表示件数も指定可能
+git log -p
+git log -p <limit>
+# 指定したファイルを含む履歴のみ表示
+git log <file>
+# @option --pretty  デフォルトのフォーマットをカスタムできる
+git log --pretty=oneline
+git log --pretty=short
+git log --pretty=full
+# @option --pretty=format:""  独自のフォーマットを指定してカスタムできる
+# %H || %h  コミットのハッシュ
+# %T || %t  ツリーのハッシュ
+# %P || %p  親のハッシュ
+# %a || cn  最初に作業を行った人(Author)||その作業を適用した人(Committer)の名前
+# %a || ce  Author||Committerのメールアドレス
+# %a || cd  Author||Committerの日付
+# %a || cr  Author||Committerの相対日付
+# %s  コミットの件名
+git log --pretty=format:"%h - %an, %ar : %s"
+# @option --graph  ブランチを視覚的に表示
+# @option --decorate  ブランチ名の表示
+git log --graph --decorate --oneline
 
 # コミットの取り消し
 # ステージングした内容を取り消すが（アンステージング）、変更した内容は保持される
@@ -73,6 +101,6 @@ git clean -fd
 
 # 指定したファイルのワーキングディレクトリの状態を、ステージング済みの内容に上書きする
 git checkout <file>
-q
+
 # .gitを削除してGitの管理下からプロジェクトを外す
 # rm -rf .git
