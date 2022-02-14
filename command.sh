@@ -102,6 +102,12 @@ git clean -f
 git clean -nd
 git clean -fd
 
+# 指定した状態を確認・閲覧する
+git checkout <branch_name>
+git checkout <commit id>
+# ファイル指定のチェックアウトのみ、指定した状態まで全てを打ち消して戻す
+git checkout <commit id> <file_name>
+
 # その他
 
 # 指定したファイルのワーキングディレクトリの状態を、ステージング済みの内容に上書きする
