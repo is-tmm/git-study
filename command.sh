@@ -38,9 +38,14 @@ git diff README.md
 # 基本的にメッセージは、「現在形」「何故」「どのように」
 git commit
 # @option -m  １行のコミットメッセージと共に記録
-# git commit -m "コミットメッセージ"
+git commit -m "コミットメッセージ"
 # @option -a  -allの略。差分のあるステージングエリアのファイルをまとめてaddして、かつcommitを実行する
-# git commit -a -m "コミットメッセージ"
+git commit -a -m "コミットメッセージ"
+# @option --amend  直前のコミットを修正。修正したい内容をgit addでステージングしてから実行する。
+# ステージングしなければコミットメッセージの修正のみも可能
+git commit --amend
+# @option --no-edit コミットメッセージの修正を行わない
+git commit --amend --no-edit
 
 # コミット履歴の閲覧
 git log
