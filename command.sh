@@ -112,10 +112,39 @@ git checkout <commit id> <file_name>
 # 指定したコミットの変更内容に対して、変更内容を打ち消すコミットを新たに行う
 git revert <commit id>
 
+
 # その他
 
 # 指定したファイルのワーキングディレクトリの状態を、ステージング済みの内容に上書きする
 git checkout <file>
 
+# ワーキングディレクトリのみから圧縮ファイル(アーカイブ)作成する
+# @option -l  選択できるファイル形式の確認
+git archive -l
+# @option --format  ファイル形式の指定
+# @option -o  ファイル名の指定
+git archive --format=zip HEAD -o backup.zip
+# 作成したアーカイブの中身を確認
+zipinfo backup.zip
+
 # .gitを削除してGitの管理下からプロジェクトを外す
 # rm -rf .git
+
+# gitのカスタマイズ
+# .gitconfigというプレーンテキストファイルに保存される
+# コンソールに色付け
+git config --global color.ui true
+# コマンドのショートカット作成
+# alias.ショートカットにしたい文字 実行するgitコマンド
+git config --global alias.co checkout
+git config --global alias.st state
+
+# gitで管理しないファイルを指定する
+# .gitignoreファイルの作成
+# globパターンで記述ができるテキストファイル
+# git addでインデックスしてしまったファイルを管理外にするには
+git rm --cached <file_name>
+git rm --cached <directory_name>/
+# グローバルにgitの設定をしたい場合は、~/.gitignore_globalのファイルに記述する
+# 記述後、変更内容を適用する
+git config --global core.excludesfile '~/.gitignore_global'
