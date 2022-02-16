@@ -9,6 +9,10 @@ git clone  https://github.com/<my_account>/<remote_repository>.git <任意:ロ�
 # 他の人が参照できるリポジトリ
 # リモートリポジトリの設定
 git remote add origin https://github.com/<my_account>/<remote_repository>.git
+# リモートブランチのログを見る
+git log origin/<branch>
+# リモートブランチとの比較
+git diff <local_branch> oring/<remote_branch>
 
 # HEAD||インデックス
 # 現在のリポジトリの先頭＝ワーキングディレクトリの状態
@@ -42,6 +46,9 @@ git push --set-upstream origin main
 
 # フェッチ
 # リモートの情報をローカルに取り込む
+git fetch
+# @option --all  全てのブランチの情報を取り込む
+git fetch --all
 
 # マージ
 # 2つ以上のブランチの開発履歴を併合する
